@@ -1,5 +1,5 @@
 # Tonny陳の静态个人站
-#### Copyright © 2024 陈昕宇. All rights reserved.
+### 开发历程
 #### 2024.05.03 v1.0
 前端开发初步完成，网站正式发布
 #### 2024.05.07 v2.0
@@ -10,4 +10,5 @@
 备用站启用，备用站转跳按钮启用
 #### 主站URL: https://blog.tonnychen168.top/
 #### 镜像站URL: https://tonnychen668.github.io/
-#### Powered by Github Pages
+### Copyright © 2024 陈昕宇. All rights reserved.
+### Powered by Github Pages
