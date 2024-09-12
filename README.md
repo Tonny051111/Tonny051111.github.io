@@ -13,5 +13,5 @@
 #### 主站URL: https://blog.tonnychen168.top/
 #### 镜像站URL: https://tonnychen668.github.io/
 ### 【关于项目】
-#### Copyright © 2023-2024 陈昕宇. All rights reserved.
+#### Copyright © 2024 陈昕宇. All rights reserved.
 #### Powered by Github Pages
