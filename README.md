@@ -12,8 +12,8 @@
 个人信息更新，部分功能替换；
 #### 2024.10.13 v2.4
 个人技能模块更新，图标优化。
-#### 主站URL: https://tonnychen168.top/
-#### 镜像站URL: https://tonnychen668.github.io/
+#### 主站URL: https://tonnychen.top/
+#### 镜像站URL: https://tonnychen168.top/
 ### 【关于项目】
 #### Copyright © 2024 陈昕宇. All rights reserved.
 #### Powered by Github Pages
