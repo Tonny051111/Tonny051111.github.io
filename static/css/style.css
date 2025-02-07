@@ -118,7 +118,7 @@ body {
     transition: all 0.5s ease;
 }
 
-#PageLoading-zyyo {
+#PageLoading-tonny {
     width: 100%;
     height: 100%;
     display: flex;
@@ -127,7 +127,7 @@ body {
     position: relative;
 }
 
-#PageLoading-zyyo-center {
+#PageLoading-tonny-center {
     height: 200px;
     width: 200px;
     position: relative;
