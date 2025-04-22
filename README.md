@@ -15,7 +15,7 @@
 #### 2025.02.07 v2.4
 个人信息更新，移除部分未启用文件。
 #### 主站URL: https://tonnychen.top/
-#### 镜像站URL: https://tonnychen168.top/
+#### 镜像站URL: https://tonnychen668.github.io/
 ### 【关于项目】
 #### Copyright © 2024-2025 陈昕宇. All rights reserved.
 #### Powered by Github Pages
