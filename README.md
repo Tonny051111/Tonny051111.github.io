@@ -16,7 +16,7 @@
 个人信息更新，移除部分未启用文件；
 #### 2026.01.08 v2.6
 个人资料更新，替换Website板块内容，Project板块新增若干项目；
-#### 2026.01.09 v2.7
+#### 2026.01.09 v3.0
 页面布局优化，Website板块、Project板块图标更新。
 #### 主站URL: https://tonnychen.top/
 #### 镜像站URL: https://tonnychen668.github.io/
