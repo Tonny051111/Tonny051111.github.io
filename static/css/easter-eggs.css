@@ -59,3 +59,11 @@
   .tag-flip-inner { transition-duration: .01s; }
   .takeover, .takeover-terminal, .birthday-hat, .takeover-message, .takeover-message p + p { animation: none !important; }
 }
+
+.logo,
+.tag-flip,
+.birthday-date,
+.takeover,
+.takeover * {
+    cursor: url('/static/sb.cur'), auto;
+}
