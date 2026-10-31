@@ -17,6 +17,7 @@
     <meta property="og:site_name" content="Tonny陳">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="/static/css/style.css?v=1.33">
+    <link rel="stylesheet" href="/static/css/easter-eggs.css?v=4.0.3">
 </head>
 <body>
 <!-- 刷新加载动画 -->
@@ -36,7 +37,7 @@
     <div onclick="left()" class="left">
         <div class="left-main">
 
-            <div  class="logo" style="background-image: url(favicon.ico);"></div>
+            <button type="button" id="avatarButton" class="logo" style="background-image: url(favicon.ico);" aria-label="Tonny陳的头像"></button>
             
             <div class="left-div left-des">
                 <div class="left-div-item">
@@ -62,9 +63,9 @@
                 </div>
             </div>
             <div class="left-div left-tag">
-                <div class="left-tag-item">
-                    ISFP
-                </div>
+                <button type="button" class="left-tag-item tag-flip" id="isfpTag" aria-label="ISFP，点击翻面" aria-pressed="false">
+                    <span class="tag-flip-inner" aria-hidden="true"><span class="tag-face tag-front">ISFP</span><span class="tag-face tag-back">再躺会</span></span>
+                </button>
                 <div class="left-tag-item">
                     ASIC
                 </div>
@@ -90,6 +91,11 @@
                 <ul id="line">
                     <li>
                         <div class="focus"></div>
+                        <div>2026-11-01</div>
+                        <div>v4.0版本更新</div>
+                    </li>
+                    <li>
+                        <div class="focus"></div>
                         <div>2026-10-05</div>
                         <div>v3.3版本更新</div>
                     </li>
@@ -111,12 +117,12 @@
                     <li>
                         <div class="focus"></div>
                         <div>2026-01-08</div>
-                        <div>v2.6功能更新</div>
+                        <div>v2.6版本更新</div>
                     </li>
                     <li>
                         <div class="focus"></div>
                         <div>2025-02-07</div>
-                        <div>v2.5功能更新</div>
+                        <div>v2.5版本更新</div>
                     </li>
                     <li>
                         <div class="focus"></div>
@@ -131,22 +137,22 @@
                     <li>
                         <div class="focus"></div>
                         <div>2024-10-13</div>
-                        <div>v2.4功能更新</div>
+                        <div>v2.4版本更新</div>
                     </li>
                     <li>
                         <div class="focus"></div>
                         <div>2024-09-10</div>
-                        <div>v2.3功能更新</div>
+                        <div>v2.3版本更新</div>
                     </li>
                     <li>
                         <div class="focus"></div>
                         <div>2024-05-25</div>
-                        <div>v2.2功能更新</div>
+                        <div>v2.2版本更新</div>
                     </li>
                     <li>
                         <div class="focus"></div>
                         <div>2024-05-12</div>
-                        <div>v2.1更新优化</div>
+                        <div>v2.1版本更新</div>
                     </li>
                     <li>
                         <div class="focus"></div>
@@ -175,7 +181,7 @@
                     </li>
                     <li>
                         <div class="focus"></div>
-                        <div>2023-11-11</div>
+                        <div><button type="button" id="birthdayTrigger" class="birthday-date" aria-label="2023年11月11日，庆祝生日与项目建立">2023-11-11</button></div>
                         <div>项目正式建立</div>
                     </li>
                 </ul>
@@ -191,7 +197,7 @@
             </div>
             <div class="description"> 🛠️ <span class="purpleText"> Amateur</span> Developer & Tech Enthusiast
             </div>
-            <div class="description"> ⛵️  He who does not advance loses ground.
+            <div class="description"> ⛵️  Wait not for the moon yet to rise, cling not to the sun already set.
             </div>
             <div class="iconContainer"> <!-- 图标容器开始 -->
 
@@ -464,6 +470,7 @@
 </body>
 
 <script src="/static/js/script.js?v=1.33"> </script>
+<script src="/static/js/easter-eggs.js?v=4.0.2"></script>
 
 <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
 <script>LA.init({ id: "KFqltKSkJgQTGD9l", ck: "KFqltKSkJgQTGD9l" })</script>
