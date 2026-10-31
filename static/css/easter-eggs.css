@@ -1,0 +1,61 @@
+/* v4.0: small, self-contained additions to the original layout. */
+.logo, .tag-flip, .birthday-date { border: 0; color: inherit; font-family: inherit; cursor: pointer; }
+.logo { display: block; background-color: transparent; padding: 0; -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+.logo:focus-visible, .tag-flip:focus-visible, .birthday-date:focus-visible { outline: 2px solid #8887fa; outline-offset: 5px; }
+.logo.avatar-shake { animation: avatar-shake .38s ease both; }
+@keyframes avatar-shake {
+  0%, 100% { transform: rotate(0); }
+  22% { transform: rotate(-7deg) translateX(-2px); }
+  48% { transform: rotate(6deg) translateX(2px); }
+  72% { transform: rotate(-3deg); }
+}
+.tag-flip { width: 49px; padding: 0; perspective: 300px; background: transparent; }
+.tag-flip-inner { position: relative; display: block; width: 100%; height: 100%; transform-style: preserve-3d; transition: transform .55s cubic-bezier(.2,.7,.2,1); }
+.tag-flip[aria-pressed="true"] .tag-flip-inner { transform: rotateY(180deg); }
+.tag-face { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; border-radius: 10px; backface-visibility: hidden; -webkit-backface-visibility: hidden; background: var(--main-bg-color, linear-gradient(50deg,#a2d1ff,#fff)); }
+.tag-back { transform: rotateY(180deg); font-size: 12px; white-space: nowrap; }
+.birthday-date { padding: 0; background: transparent; font-size: inherit; line-height: inherit; text-align: left; }
+.birthday-date:hover { color: #8887fa; }
+.birthday-hat { position: absolute; width: 34%; height: 44%; left: 63%; top: -20%; object-fit: contain; transform: rotate(30deg); transform-origin: 50% 90%; pointer-events: none; animation: hat-arrive .65s ease both; }
+@keyframes hat-arrive { from { opacity: 0; transform: translateY(-12px) rotate(20deg); } to { opacity: 1; transform: translateY(0) rotate(30deg); } }
+.birthday-confetti { position: fixed; inset: 0; z-index: 1000000; width: 100%; height: 100%; pointer-events: none; }
+.motto { max-width: 100%; line-height: 1.55; text-wrap: pretty; }
+
+/* The takeover is a temporary page overlay; it never requests fullscreen. */
+.takeover, .takeover * { box-sizing: border-box; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; cursor: auto; transition: none; }
+.takeover { position: fixed; inset: 0; z-index: 2000000; display: grid; place-items: center; overflow: hidden; outline: none; background: #030907; color: #8fffc0; isolation: isolate; animation: takeover-arrive .22s ease-out both; }
+.takeover canvas { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .32; }
+.takeover::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: repeating-linear-gradient(0deg,transparent 0 3px,#0003 3px 4px); z-index: 3; opacity: .6; }
+.takeover-corner { position: absolute; left: 5vw; top: 6vh; font-size: 11px; letter-spacing: .18em; opacity: .6; }
+.takeover-bottom { position: absolute; bottom: 5vh; left: 5vw; right: 5vw; display: flex; justify-content: space-between; gap: 10px; font-size: 10px; letter-spacing: .13em; opacity: .5; }
+.takeover-terminal { position: relative; z-index: 2; width: min(620px,86vw); border: 1px solid #59ff9d55; background: #03100ce8; box-shadow: 0 0 75px #00ff7720,inset 0 0 30px #00ff7708; animation: terminal-drift 1.8s steps(1,end) infinite; }
+.terminal-bar { display: flex; align-items: center; gap: 7px; padding: 13px 18px; border-bottom: 1px solid #59ff9d30; font-size: 10px; letter-spacing: .17em; color: #75a58a; }
+.terminal-dot { width: 6px; height: 6px; border-radius: 50%; background: #58e49b; }
+.terminal-bar span:last-child { margin-left: auto; }
+.terminal-body { padding: clamp(20px,4vw,38px); }
+.takeover-title { position: relative; margin: 0 0 22px; font-size: clamp(27px,5vw,48px); line-height: 1.1; letter-spacing: .08em; font-weight: 800; color: #b2ffd0; text-shadow: 2px 0 #ff4a8b99,-2px 0 #20dffb99; }
+.terminal-lines { height: 132px; font-size: clamp(10px,2.4vw,13px); line-height: 1.85; color: #75c795; white-space: pre-wrap; overflow: hidden; }
+.terminal-progress { height: 3px; margin-top: 22px; background: #123a24; overflow: hidden; }
+.terminal-progress span { display: block; height: 100%; background: #81ffb3; transform-origin: left; animation: terminal-progress 4.6s linear both; }
+.takeover-message { display: none; position: relative; z-index: 4; width: 90%; padding: 24px; text-align: center; }
+.takeover-message p { color: #f3f7f4; font-family: inherit; font-size: clamp(23px,5vw,36px); line-height: 1.7; letter-spacing: .03em; }
+.takeover-message p + p { margin-top: 16px; font-size: clamp(15px,3.4vw,21px); color: #b4d2bf; animation: blessing-arrive .7s .7s ease both; }
+.takeover.is-reveal { background: #07100d; }
+.takeover.is-reveal .takeover-terminal, .takeover.is-reveal .takeover-corner, .takeover.is-reveal .takeover-bottom { display: none; }
+.takeover.is-reveal canvas { opacity: .07; }
+.takeover.is-reveal .takeover-message { display: block; animation: blessing-arrive .65s ease both; }
+.takeover.is-leaving { opacity: 0; transition: opacity .65s ease; pointer-events: none; }
+@keyframes takeover-arrive { from { opacity: 0; transform: scale(1.015); } to { opacity: 1; transform: scale(1); } }
+@keyframes terminal-drift { 0%,84%,100% { transform: translate(0); } 86% { transform: translate(-3px,1px); } 89% { transform: translate(2px,-1px); } 92% { transform: translate(0); } }
+@keyframes terminal-progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes blessing-arrive { from { opacity: 0; transform: translateY(9px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 800px) {
+  .takeover-corner { top: 9vh; font-size: 9px; }
+  .takeover-bottom { font-size: 8px; }
+  .motto { font-size: 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .logo.avatar-shake { animation: none; }
+  .tag-flip-inner { transition-duration: .01s; }
+  .takeover, .takeover-terminal, .birthday-hat, .takeover-message, .takeover-message p + p { animation: none !important; }
+}
