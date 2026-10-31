@@ -59,7 +59,7 @@
         <div class="terminal-body"><div class="takeover-title">SIGNAL LOST_</div><pre class="terminal-lines"></pre><div class="terminal-progress"><span></span></div></div>
       </div>
       <div class="takeover-bottom" aria-hidden="true"><span>0x0B / PRIVATE CHANNEL</span><span>DECODING UNEXPECTED MESSAGE…</span></div>
-      <div class="takeover-message" role="status"><p>哈哈，吓到了吧 : )</p><p>愿你生活中的意外，最后都变成惊喜～</p></div>`;
+      <div class="takeover-message" role="status"><p>哈哈，吓到了吧 :)</p><p>愿你生活中的意外，最后都变成惊喜～</p></div>`;
     const previousFocus = document.activeElement;
     const oldOverflow = document.body.style.overflow;
     const oldInert = main.inert;
